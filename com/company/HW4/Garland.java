@@ -9,13 +9,8 @@ public class Garland {
         Scanner sc = new Scanner(System.in);
         if (sc.hasNextInt()) {
             b = sc.nextInt();
-            /*while (i < b) {//способ добавить лидирующие нули из интернета
-                System.out.println(String.format("%32s", Integer.toBinaryString(a)).replace(' ', '0'));
-                a = ~a;
-                i++;
-            }*/
             while (i < b) {
-                zero = Integer.toBinaryString(a).length();//мой способ добавить лидирующие нули
+                zero = Integer.toBinaryString(a).length();
                 if (zero < 32) {
                     while (zero < 32) {
                         System.out.print(0);
@@ -40,7 +35,7 @@ public class Garland {
         if (sc.hasNextInt()) {
             b = sc.nextInt();
             while (i < b) {
-                zero = Integer.toBinaryString(a).length();//мой способ добавить лидирующие нули
+                zero = Integer.toBinaryString(a).length();
                 if (zero < 32) {
                     while (zero < 32) {
                         System.out.print(0);
@@ -70,7 +65,7 @@ public class Garland {
 
     public static void garland4(int a) {
         int zero;
-        zero = Integer.toBinaryString(a).length();//мой способ добавить лидирующие нули
+        zero = Integer.toBinaryString(a).length();
         if (zero < 32) {
             while (zero < 32) {
                 System.out.print(0);
