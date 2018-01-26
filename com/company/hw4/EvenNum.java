@@ -1,4 +1,4 @@
-package com.company.HW4;
+package com.company.hw4;
 
 public class EvenNum {
     public static void main(String[] args) {

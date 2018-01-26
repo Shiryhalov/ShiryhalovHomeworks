@@ -1,4 +1,4 @@
-package com.company.HW2;
+package com.company.hw2;
 
 public class LiteralsAndSumm {
 

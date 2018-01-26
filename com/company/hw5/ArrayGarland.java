@@ -1,26 +1,25 @@
-package com.company.HW4;
+package com.company.hw5;
 
 import java.util.Scanner;
+import java.util.Arrays;
 
-public class Garland {
-    public static void garland1(int a) {
-        int i = 0, b, zero;
+public class ArrayGarland {
+    private static void blink(int a) {
+        int i = 0, b;
+        String[] arr = Integer.toBinaryString(a).split("");
         System.out.println("Сколько раз мигнуть гирлянде?");
         Scanner sc = new Scanner(System.in);
         if (sc.hasNextInt()) {
             b = sc.nextInt();
             while (i < b) {
-                zero = Integer.toBinaryString(a).length();
-                if (zero < 32) {
-                    while (zero < 32) {
-                        System.out.print(0);
-                        zero++;
+                for (int j = 0; j < arr.length; j++) {
+                    if (arr[j].equals("0")) {
+                        arr[j] = "1";
+                    } else {
+                        arr[j] = "0";
                     }
-                    System.out.print(Integer.toBinaryString(a) + "\n");
-                } else {
-                    System.out.println(Integer.toBinaryString(a));
                 }
-                a = ~a;
+                System.out.println(Arrays.deepToString(arr));
                 i++;
             }
         } else {
@@ -28,59 +27,53 @@ public class Garland {
         }
     }
 
-    public static void garland2(int a) {
-        int i = 0, b, zero;
+    private static void run(int a) {
+        int i = 0, b;
+        String[] arr = Integer.toBinaryString(a).split("");
+        String[] dst = new String[arr.length];
         System.out.println("Сколько раз мигнуть гирлянде?");
         Scanner sc = new Scanner(System.in);
         if (sc.hasNextInt()) {
             b = sc.nextInt();
+            System.out.println(Arrays.deepToString(arr));
             while (i < b) {
-                zero = Integer.toBinaryString(a).length();
-                if (zero < 32) {
-                    while (zero < 32) {
-                        System.out.print(0);
-                        zero++;
+                for (int j = 0; j < arr.length; j++) {
+                    if (j == 0) {
+                        System.arraycopy(arr, j, dst, dst.length - 1, 1);
+                        System.arraycopy(arr, j, arr, arr.length - 1, 1);
+                    } else {
+                        System.arraycopy(arr, j, dst, j - 1, 1);
+                        System.arraycopy(arr, j, arr, j - 1, 1);
                     }
-                    System.out.print(Integer.toBinaryString(a << 1) + "\n");
-                } else {
-                    System.out.println(Integer.toBinaryString(a << 1));
                 }
-                a = a << 1;
+                System.out.println(Arrays.deepToString(dst));
                 i++;
             }
+
         } else {
             System.out.println("Столько раз мигнуть не получится");
         }
     }
 
-    public static void garland3(int a) {
-        int b;
-        b = a & 1;
-        if (b == 1) {
+    private static void checkFirstLamp(int a) {
+        String[] arr = Integer.toBinaryString(a).split("");
+        if (arr[0].equals("1")) {
             System.out.println("Первая лампочка горит");
         } else {
             System.out.println("Первая лампочка не горит");
         }
     }
 
-    public static void garland4(int a) {
-        int zero;
-        zero = Integer.toBinaryString(a).length();
-        if (zero < 32) {
-            while (zero < 32) {
-                System.out.print(0);
-                zero++;
-            }
-            System.out.print(Integer.toBinaryString(a) + "\n");
-        } else {
-            System.out.println(Integer.toBinaryString(a));
-        }
+    private static void show(int a) {
+        String[] arr = Integer.toBinaryString(a).split("");
+        System.out.println(Arrays.deepToString(arr));
+
     }
 
     public static void main(String[] args) {
-        int b, num = 87381;
+        int b, num = 64513;
         while (true) {
-            System.out.println("Что вы хотели бы сделать с гирляндой?");
+            System.out.println("\nЧто вы хотели бы сделать с гирляндой?");
             System.out.println("1 - Мигание");
             System.out.println("2 - Бегущая строка");
             System.out.println("3 - Узнать, работает ли первая лампочка");
@@ -91,16 +84,16 @@ public class Garland {
                 if ((b == 1) || (b == 2) || (b == 3) || (b == 4)) {
                     switch (b) {
                         case 1:
-                            garland1(num);
+                            blink(num);
                             break;
                         case 2:
-                            garland2(num);
+                            run(num);
                             break;
                         case 3:
-                            garland3(num);
+                            checkFirstLamp(num);
                             break;
                         case 4:
-                            garland4(num);
+                            show(num);
                             break;
                     }
                 } else {

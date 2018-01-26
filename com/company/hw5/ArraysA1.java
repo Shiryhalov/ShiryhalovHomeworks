@@ -1,4 +1,4 @@
-package com.company.HW5;
+package com.company.hw5;
 
 public class ArraysA1 {
     public static void main(String[] args) {

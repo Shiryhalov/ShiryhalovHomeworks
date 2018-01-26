@@ -1,4 +1,4 @@
-package com.company.HW5;
+package com.company.hw4;
 
 import java.util.Scanner;
 
@@ -80,7 +80,7 @@ public class Garland {
     public static void main(String[] args) {
         int b, num = 87381;
         while (true) {
-            System.out.println("\nЧто вы хотели бы сделать с гирляндой?");
+            System.out.println("Что вы хотели бы сделать с гирляндой?");
             System.out.println("1 - Мигание");
             System.out.println("2 - Бегущая строка");
             System.out.println("3 - Узнать, работает ли первая лампочка");

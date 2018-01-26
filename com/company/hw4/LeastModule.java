@@ -1,4 +1,4 @@
-package com.company.HW4;
+package com.company.hw4;
 
 import java.util.Scanner;
 
@@ -18,14 +18,10 @@ public class LeastModule {
             c1 = c < 0 ? -c : c;
             if (a1 <= b1 && a1 <= c1) {
                 System.out.println("Наименьшее число по модулю " + a);
-            } else {
-                if (b1 <= a1 && b1 <= c1) {
-                    System.out.println("Наименьшее число по модулю " + b);
-                } else {
-                    if (c1 <= a1 && c1 <= b1) {
-                        System.out.println("Наименьшее число по модулю " + c);
-                    }
-                }
+            } else if (b1 <= a1 && b1 <= c1) {
+                System.out.println("Наименьшее число по модулю " + b);
+            } else if (c1 <= a1 && c1 <= b1) {
+                System.out.println("Наименьшее число по модулю " + c);
             }
         } else {
             System.out.println("Вы ввели не вещественное число");

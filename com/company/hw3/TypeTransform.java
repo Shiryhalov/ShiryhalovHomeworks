@@ -1,4 +1,4 @@
-package com.company.HW3;
+package com.company.hw3;
 
 public class TypeTransform {
     /**
