@@ -6,6 +6,7 @@ public class Phone {
     long number;
     String model;
     double weight;
+    static int counter;
 
     public void receiveCall(String name) {
         System.out.println("Звонит " + name);
@@ -36,9 +37,9 @@ public class Phone {
     }
 
     public Phone(long number, String model, double weight) {
-
         this(number, model);
         this.weight = weight;
+        counter++;
     }
 
     public Phone(long number, String model) {
@@ -48,6 +49,7 @@ public class Phone {
     }
 
     public Phone() {
+        counter++;
     }
 
     public void receiveCall(String name, long numberC) {

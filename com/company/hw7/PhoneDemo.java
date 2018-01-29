@@ -10,6 +10,7 @@ public class PhoneDemo {
         System.out.println(apple.getNumber());
         lenovo.receiveCall("Василий Сухофрукты", 380661431415L);
         asus.sendMessage(380504459070L, 380997723132L, 380661431415L, 380501435675L);
+        System.out.println("\nСоздано телефонов: " + Phone.counter);
     }
 }
 
