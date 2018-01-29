@@ -1,7 +1,7 @@
 package com.company.hw9;
 
 public class OneMoreCircleDemo {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         OneMoreCircle circle1 = new OneMoreCircle(15);
         OneMoreCircle circle2 = new OneMoreCircle(8);
 

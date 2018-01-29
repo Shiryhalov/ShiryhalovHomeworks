@@ -6,8 +6,8 @@ public class Pear extends Fruit {
     double price;
 
     @Override
-    public double cost(){
-        double cost = price*weight;
+    public double cost() {
+        double cost = price * weight;
         return cost;
     }
 
