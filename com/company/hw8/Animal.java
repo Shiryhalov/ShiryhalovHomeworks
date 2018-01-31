@@ -6,6 +6,14 @@ public class Animal {
     protected String food;
     protected String location;
 
+    public Animal(String food, String location) {
+        this.food = food;
+        this.location = location;
+    }
+
+    public Animal() {
+    }
+
     public void makeNoise() {
         System.out.println("Животное шумит");
     }
@@ -16,14 +24,6 @@ public class Animal {
 
     public void sleep() {
         System.out.println("Животное спит");
-    }
-
-    public Animal(String food, String location) {
-        this.food = food;
-        this.location = location;
-    }
-
-    public Animal() {
     }
 
     public String getFood() {

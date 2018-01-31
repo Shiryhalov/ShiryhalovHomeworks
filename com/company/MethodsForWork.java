@@ -12,7 +12,20 @@ public class MethodsForWork {
                 i++;
             } else {
                 System.out.println("Введите целое число");
-                i = 0;
+            }
+        }
+        return b;
+    }
+
+    public static double checkDouble() {
+        double i = 0, b = 0;
+        while (i == 0) {
+            Scanner sc = new Scanner(System.in);
+            if (sc.hasNextDouble()) {
+                b = sc.nextDouble();
+                i++;
+            } else {
+                System.out.println("Введите вещественное число");
             }
         }
         return b;

@@ -4,19 +4,6 @@ public class Magazine implements Printable {
     String name;
     int pages;
 
-    public void print() {
-        System.out.println("Печать журнала " + name + ", страниц: " + pages);
-    }
-
-    public static void printMagazines(Printable[] printables) {
-        for (int i = 0; i < printables.length; i++) {
-            if (printables[i] instanceof Magazine) {
-                printables[i].print();
-            }
-        }
-
-    }
-
     public Magazine(String name, int pages) {
         this.name = name;
         this.pages = pages;
@@ -39,6 +26,19 @@ public class Magazine implements Printable {
 
     public void setPages(int pages) {
         this.pages = pages;
+    }
+
+    public void print() {
+        System.out.println("Печать журнала " + name + ", страниц: " + pages);
+    }
+
+    public static void printMagazines(Printable[] printables) {
+        for (int i = 0; i < printables.length; i++) {
+            if (printables[i] instanceof Magazine) {
+                printables[i].print();
+            }
+        }
+
     }
 
     @Override

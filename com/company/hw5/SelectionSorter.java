@@ -7,7 +7,7 @@ public class SelectionSorter {
             int min = array[i];
             // цикл выбора наименьшего элемента
             for (int j = i + 1; j < array.length; j++) {
-                if (array[j] < min && array[j] != min) {
+                if (array[j] < min) {
                     pos = j;    // pos - индекс наименьшего элемента
                     min = array[j];
                 }

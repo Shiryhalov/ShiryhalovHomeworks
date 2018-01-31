@@ -36,6 +36,15 @@ public class Flower {
         return price;
     }
 
+    public double bouquet(Flower[] bouquet) {
+        double bouquetPrice = 0;
+        for (int i = 0; i < bouquet.length; i++) {
+            bouquetPrice += bouquet[i].getPrice();
+            count++;
+        }
+        return bouquetPrice;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -57,14 +66,5 @@ public class Flower {
                 "producerCountry='" + producerCountry + '\'' +
                 ", bestBefore=" + bestBefore +
                 '}';
-    }
-
-    public double bouquet(Flower[] bouquet) {
-        double bouquetPrice = 0;
-        for (int i = 0; i < bouquet.length; i++) {
-            bouquetPrice += bouquet[i].getPrice();
-            count++;
-        }
-        return bouquetPrice;
     }
 }

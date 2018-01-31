@@ -4,7 +4,7 @@ import com.company.details.Engine;
 import com.company.professions.Driver;
 
 public class CarDemo {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Driver driver1 = new Driver("Иванов И.В.", 35, 15);
         Driver driver2 = new Driver("Порох П.И.", 69, 23);
         Driver driver3 = new Driver("Путин В.В.", 63, 30);

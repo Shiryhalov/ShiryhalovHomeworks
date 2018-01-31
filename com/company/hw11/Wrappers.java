@@ -3,7 +3,7 @@ package com.company.hw11;
 import com.company.hw7.Book;
 
 public class Wrappers {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Double double1 = 123.5;
         Double double2 = 123.6;
         Double double3 = new Double("123");

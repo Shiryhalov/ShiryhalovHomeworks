@@ -5,10 +5,6 @@ import java.util.Objects;
 public class Drum implements Instrument {
     protected int size;
 
-    public void play(){
-        System.out.println("Играет барабан с размером " + size);
-    }
-
     public Drum(int size) {
         this.size = size;
     }
@@ -22,6 +18,10 @@ public class Drum implements Instrument {
 
     public void setSize(int size) {
         this.size = size;
+    }
+
+    public void play() {
+        System.out.println("Играет барабан с размером " + size);
     }
 
     @Override

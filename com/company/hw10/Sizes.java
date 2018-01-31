@@ -23,4 +23,11 @@ public enum Sizes {
     public String getDescription() {
         return "Взрослый размер";
     }
+
+    @Override
+    public String toString() {
+        return "Sizes{" +
+                "euroSize=" + euroSize +
+                '}';
+    }
 }

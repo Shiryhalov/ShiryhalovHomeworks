@@ -5,7 +5,7 @@ import com.company.professions.Driver;
 
 import java.util.Objects;
 
-public class SportCar extends Car{
+public class SportCar extends Car {
     private int maxSpeed;
 
     public SportCar(String mark, String carClass, int weight, Driver driver, Engine engine, int maxSpeed) {
@@ -32,6 +32,18 @@ public class SportCar extends Car{
         this.maxSpeed = maxSpeed;
     }
 
+    public void printInfo() {
+        System.out.println("Автомобиль марки " + mark +
+                ", класс " + carClass +
+                ", вес " + weight +
+                ", предельная скорость " + maxSpeed +
+                "; \nВодитель: " + driver.getFullName() +
+                ", возраст " + driver.getAge() +
+                ", опыт работы " + driver.getExperience() +
+                "; \nМотор " + engine.getProducer() +
+                ", мощность " + engine.getPower());
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -52,17 +64,5 @@ public class SportCar extends Car{
         return "SportCar{" +
                 "maxSpeed=" + maxSpeed +
                 '}';
-    }
-
-    public void printInfo() {
-        System.out.println("Автомобиль марки " + mark +
-                ", класс " + carClass +
-                ", вес " + weight +
-                ", предельная скорость " + maxSpeed +
-                "; \nВодитель: " + driver.getFullName() +
-                ", возраст " + driver.getAge() +
-                ", опыт работы " + driver.getExperience() +
-                "; \nМотор " + engine.getProducer() +
-                ", мощность " + engine.getPower());
     }
 }

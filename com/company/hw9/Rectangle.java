@@ -10,6 +10,13 @@ public class Rectangle extends Shape {
         this.z = z;
     }
 
+    public Rectangle(String color) {
+        super(color);
+    }
+
+    public Rectangle() {
+    }
+
     public int getX() {
         return x;
     }

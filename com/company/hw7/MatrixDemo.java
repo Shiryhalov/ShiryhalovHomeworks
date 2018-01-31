@@ -1,7 +1,5 @@
 package com.company.hw7;
 
-import java.util.Arrays;
-
 public class MatrixDemo {
     public static void main(String[] args) {
         Matrix matrix1 = new Matrix(new int[][]{{1, 2, 3}, {4, 5, 6}});

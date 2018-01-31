@@ -5,10 +5,6 @@ import java.util.Objects;
 public class Tube implements Instrument {
     protected int diam;
 
-    public void play(){
-        System.out.println("Играет труба с диаметром " + diam);
-    }
-
     public Tube(int diam) {
         this.diam = diam;
     }
@@ -22,6 +18,10 @@ public class Tube implements Instrument {
 
     public void setDiam(int diam) {
         this.diam = diam;
+    }
+
+    public void play() {
+        System.out.println("Играет труба с диаметром " + diam);
     }
 
     @Override

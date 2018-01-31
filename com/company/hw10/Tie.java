@@ -2,9 +2,6 @@ package com.company.hw10;
 
 public class Tie extends Clothes implements MensClothing{
     public String name = "Галстук";
-    public void clotheAMan() {
-
-    }
 
     public Tie(Sizes size, Double price, String color) {
         super(size, price, color);
@@ -15,6 +12,9 @@ public class Tie extends Clothes implements MensClothing{
 
     public String getName() {
         return name;
+    }
+
+    public void clotheAMan() {
     }
 
     @Override

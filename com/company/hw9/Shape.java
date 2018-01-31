@@ -7,6 +7,9 @@ public abstract class Shape {
         this.color = color;
     }
 
+    public Shape() {
+    }
+
     public String getColor() {
         return color;
     }
@@ -14,6 +17,8 @@ public abstract class Shape {
     public void setColor(String color) {
         this.color = color;
     }
+
+    public abstract void draw();
 
     @Override
     public String toString() {
@@ -37,5 +42,5 @@ public abstract class Shape {
         return color != null ? color.hashCode() : 0;
     }
 
-    public abstract void draw();
+
 }

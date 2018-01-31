@@ -5,12 +5,6 @@ import java.util.Objects;
 public class Pear extends Fruit {
     double price;
 
-    @Override
-    public double cost() {
-        double cost = price * weight;
-        return cost;
-    }
-
     public Pear(double weight, double price) {
         super(weight);
         this.price = price;
@@ -29,6 +23,12 @@ public class Pear extends Fruit {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    @Override
+    public double cost() {
+        double cost = price * weight;
+        return cost;
     }
 
     @Override

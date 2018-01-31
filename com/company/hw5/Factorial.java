@@ -3,12 +3,8 @@ package com.company.hw5;
 public class Factorial {
     public static int factorial(int a) {
         int b = 1;
-        if (a != 0) {
-            for (int i = 1; i <= a; i++) {
-                b *= i;
-            }
-        } else {
-            b = 1;
+        for (int i = 1; i <= a; i++) {
+            b *= i;
         }
         return b;
     }

@@ -2,13 +2,6 @@ package com.company.hw10;
 
 public class Tshirt extends Clothes implements MensClothing, WomensClothing {
     public String name = "Футболка";
-    public void clotheAMan() {
-
-    }
-
-    public void clotheAWoman() {
-
-    }
 
     public Tshirt(Sizes size, Double price, String color) {
         super(size, price, color);
@@ -19,6 +12,12 @@ public class Tshirt extends Clothes implements MensClothing, WomensClothing {
 
     public String getName() {
         return name;
+    }
+
+    public void clotheAMan() {
+    }
+
+    public void clotheAWoman() {
     }
 
     @Override

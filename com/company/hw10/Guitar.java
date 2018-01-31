@@ -5,10 +5,6 @@ import java.util.Objects;
 public class Guitar implements Instrument {
     protected int strings;
 
-    public void play(){
-        System.out.println("Играет гитара с " + strings + " струнами");
-    }
-
     public Guitar(int strings) {
         this.strings = strings;
     }
@@ -22,6 +18,10 @@ public class Guitar implements Instrument {
 
     public void setStrings(int strings) {
         this.strings = strings;
+    }
+
+    public void play() {
+        System.out.println("Играет гитара с " + strings + " струнами");
     }
 
     @Override

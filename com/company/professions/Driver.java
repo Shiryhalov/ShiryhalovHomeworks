@@ -4,7 +4,7 @@ import com.company.hw7.Person;
 
 import java.util.Objects;
 
-public class Driver extends Person{
+public class Driver extends Person {
     private int experience;
 
     public Driver(int experience) {

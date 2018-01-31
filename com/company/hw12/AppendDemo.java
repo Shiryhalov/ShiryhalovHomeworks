@@ -2,7 +2,6 @@ package com.company.hw12;
 
 public class AppendDemo {
     public static void main(String[] args) {
-        String s;
         int a = 3, b = 56;
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append(a).append(" + ").append(b).append(" = ").append(a + b);
@@ -18,7 +17,7 @@ public class AppendDemo {
     }
 
     private static void replaceString(StringBuilder stringBuilder) {
-        int pos1 = 0;
+        int pos1;
         while ((pos1 = stringBuilder.indexOf("=")) != -1) {
             stringBuilder.replace(pos1, pos1 + 1, "равно");
         }

@@ -5,7 +5,7 @@ import com.company.professions.Driver;
 
 import java.util.Objects;
 
-public class Lorry extends Car{
+public class Lorry extends Car {
     private int carrying;
 
     public Lorry(String mark, String carClass, int weight, Driver driver, Engine engine, int carrying) {
@@ -32,6 +32,18 @@ public class Lorry extends Car{
         this.carrying = carrying;
     }
 
+    public void printInfo() {
+        System.out.println("Автомобиль марки " + mark +
+                ", класс " + carClass +
+                ", вес " + weight +
+                ", грузоподъемность " + carrying +
+                "; \nВодитель: " + driver.getFullName() +
+                ", возраст " + driver.getAge() +
+                ", опыт работы " + driver.getExperience() +
+                "; \nМотор " + engine.getProducer() +
+                ", мощность " + engine.getPower());
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -52,17 +64,5 @@ public class Lorry extends Car{
         return "Lorry{" +
                 "carrying=" + carrying +
                 '}';
-    }
-
-    public void printInfo() {
-        System.out.println("Автомобиль марки " + mark +
-                ", класс " + carClass +
-                ", вес " + weight +
-                ", грузоподъемность " + carrying +
-                "; \nВодитель: " + driver.getFullName() +
-                ", возраст " + driver.getAge() +
-                ", опыт работы " + driver.getExperience() +
-                "; \nМотор " + engine.getProducer() +
-                ", мощность " + engine.getPower());
     }
 }

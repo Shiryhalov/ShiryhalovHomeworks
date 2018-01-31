@@ -3,12 +3,6 @@ package com.company.hw9;
 public class Circle extends Shape {
     int x, y;
 
-    public Circle(String color, int x, int y) {
-        super(color);
-        this.x = x;
-        this.y = y;
-    }
-
     public int getX() {
         return x;
     }
@@ -22,6 +16,12 @@ public class Circle extends Shape {
     }
 
     public void setY(int y) {
+        this.y = y;
+    }
+
+    public Circle(String color, int x, int y) {
+        super(color);
+        this.x = x;
         this.y = y;
     }
 

@@ -2,7 +2,6 @@ package com.company.hw8;
 
 public class FlowerDemo {
     public static void main(String[] args) {
-        Flower flower = new Flower();
         Flower gvozdika = new Gvozdika("Германия", 10);
         Flower tulpan = new Tulpan("Бельгия", 20);
         Flower rose = new Roses("Польша", 30);

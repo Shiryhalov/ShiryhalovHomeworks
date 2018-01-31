@@ -6,20 +6,20 @@ public class Person {
     String fullName;
     int age;
 
-    public void move() {
-        System.out.println(fullName + " передвигается");
-    }
-
-    public void talk() {
-        System.out.println(fullName + " говорит");
-    }
-
     public Person() {
     }
 
     public Person(String fullName, int age) {
         this.fullName = fullName;
         this.age = age;
+    }
+
+    public void move() {
+        System.out.println(fullName + " передвигается");
+    }
+
+    public void talk() {
+        System.out.println(fullName + " говорит");
     }
 
     public String getFullName() {
@@ -55,7 +55,6 @@ public class Person {
 
     @Override
     public String toString() {
-        String str = String.format("Person: Полное имя %15s, возраст: %3d", fullName, age);
-        return str;
+        return String.format("Person: Полное имя %15s, возраст: %3d", fullName, age);
     }
 }

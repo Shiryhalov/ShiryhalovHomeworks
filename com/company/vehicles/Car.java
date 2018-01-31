@@ -94,6 +94,17 @@ public class Car {
         }
     }
 
+    public void printInfo() {
+        System.out.println("Автомобиль марки " + mark +
+                ", класс " + carClass +
+                ", вес " + weight +
+                "; \nВодитель: " + driver.getFullName() +
+                ", возраст " + driver.getAge() +
+                ", опыт работы " + driver.getExperience() +
+                "; \nМотор " + engine.getProducer() +
+                ", мощность " + engine.getPower());
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -121,16 +132,5 @@ public class Car {
                 ", driver=" + driver +
                 ", engine=" + engine +
                 '}';
-    }
-
-    public void printInfo() {
-        System.out.println("Автомобиль марки " + mark +
-                ", класс " + carClass +
-                ", вес " + weight +
-                "; \nВодитель: " + driver.getFullName() +
-                ", возраст " + driver.getAge() +
-                ", опыт работы " + driver.getExperience() +
-                "; \nМотор " + engine.getProducer() +
-                ", мощность " + engine.getPower());
     }
 }

@@ -6,18 +6,6 @@ public class OneMoreCircle {
     public double radius;
     private static double pi = 3.1415;
 
-    public double cArea() {
-        double area = 0;
-        area = radius * radius * pi;
-        return area;
-    }
-
-    public double cLength() {
-        double length = 0;
-        length = 2 * radius * pi;
-        return length;
-    }
-
     public OneMoreCircle(double radius) {
         this.radius = radius;
     }
@@ -32,6 +20,18 @@ public class OneMoreCircle {
 
     public static double getPi() {
         return pi;
+    }
+
+    public double cArea() {
+        double area = 0;
+        area = radius * radius * pi;
+        return area;
+    }
+
+    public double cLength() {
+        double length = 0;
+        length = 2 * radius * pi;
+        return length;
     }
 
     @Override

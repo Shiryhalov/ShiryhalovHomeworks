@@ -5,12 +5,6 @@ import java.util.Objects;
 public abstract class Fruit {
     double weight;
 
-    public void printManufacturerInfo() {
-        System.out.print("Made in Ukraine");
-    }
-
-    public abstract double cost();
-
     public Fruit(double weight) {
         this.weight = weight;
     }
@@ -25,6 +19,12 @@ public abstract class Fruit {
     public void setWeight(double weight) {
         this.weight = weight;
     }
+
+    public void printManufacturerInfo() {
+        System.out.print("Made in Ukraine");
+    }
+
+    public abstract double cost();
 
     @Override
     public boolean equals(Object o) {

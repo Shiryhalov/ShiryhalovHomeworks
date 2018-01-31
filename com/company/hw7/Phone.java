@@ -8,6 +8,22 @@ public class Phone {
     double weight;
     static int counter;
 
+    public Phone(long number, String model, double weight) {
+        this(number, model);
+        this.weight = weight;
+        counter++;
+    }
+
+    public Phone(long number, String model) {
+
+        this.number = number;
+        this.model = model;
+    }
+
+    public Phone() {
+        counter++;
+    }
+
     public void receiveCall(String name) {
         System.out.println("Звонит " + name);
     }
@@ -36,22 +52,6 @@ public class Phone {
         this.weight = weight;
     }
 
-    public Phone(long number, String model, double weight) {
-        this(number, model);
-        this.weight = weight;
-        counter++;
-    }
-
-    public Phone(long number, String model) {
-
-        this.number = number;
-        this.model = model;
-    }
-
-    public Phone() {
-        counter++;
-    }
-
     public void receiveCall(String name, long numberC) {
         System.out.println("Звонит " + name + " " + numberC);
     }
@@ -77,6 +77,15 @@ public class Phone {
     public int hashCode() {
 
         return Objects.hash(number, model, weight);
+    }
+
+    @Override
+    public String toString() {
+        return "Phone{" +
+                "number=" + number +
+                ", model='" + model + '\'' +
+                ", weight=" + weight +
+                '}';
     }
 }
 

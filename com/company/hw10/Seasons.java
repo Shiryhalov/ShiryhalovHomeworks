@@ -3,7 +3,7 @@ package com.company.hw10;
 public enum Seasons {
     WINTER(-15.1),
     SPRING(15.3),
-    SUMMER(24.7){
+    SUMMER(24.7) {
         @Override
         public String getDescription() {
             return "Теплое время года";
@@ -16,9 +16,18 @@ public enum Seasons {
         this.avTemp = avTemp;
     }
 
-    Seasons() {}
+    Seasons() {
+    }
 
-    public void iLike(Seasons seasons){
+    public double getAvTemp() {
+        return avTemp;
+    }
+
+    public void setAvTemp(double avTemp) {
+        this.avTemp = avTemp;
+    }
+
+    public void iLike(Seasons seasons) {
         switch (seasons) {
             case WINTER:
                 System.out.println("Я люблю зиму!");
@@ -37,16 +46,8 @@ public enum Seasons {
         }
     }
 
-    public String getDescription(){
+    public String getDescription() {
         return "Холодное время года";
-    }
-
-    public double getAvTemp() {
-        return avTemp;
-    }
-
-    public void setAvTemp(double avTemp) {
-        this.avTemp = avTemp;
     }
 
     @Override

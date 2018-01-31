@@ -1,5 +1,7 @@
 package com.company.hw8;
 
+import java.util.Objects;
+
 public class Student {
     private String firstName, lastName, group;
     private double averageMark;
@@ -9,6 +11,9 @@ public class Student {
         this.lastName = lastName;
         this.group = group;
         this.averageMark = averageMark;
+    }
+
+    public Student() {
     }
 
     public String getFirstName() {
@@ -48,6 +53,23 @@ public class Student {
             return 100;
         }
         else return 80;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Student student = (Student) o;
+        return Double.compare(student.averageMark, averageMark) == 0 &&
+                Objects.equals(firstName, student.firstName) &&
+                Objects.equals(lastName, student.lastName) &&
+                Objects.equals(group, student.group);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(firstName, lastName, group, averageMark);
     }
 
     @Override

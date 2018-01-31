@@ -12,6 +12,9 @@ public class Matrix {
         setArray(array);
     }
 
+    public Matrix() {
+    }
+
     public int[][] getArray() {
         return array.clone();
     }
@@ -20,9 +23,6 @@ public class Matrix {
         this.array = array.clone();
         this.rows = array.length;
         this.columns = array[0].length;
-    }
-
-    public Matrix() {
     }
 
     public int getRows() {
