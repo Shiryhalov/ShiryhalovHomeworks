@@ -18,5 +18,6 @@ public class StringDemo {
         System.out.println(s.replace('a', 'o'));
         System.out.println(s.toLowerCase());
         System.out.println(s.toUpperCase());
+        System.out.println(s.substring(7, 11));
     }
 }
