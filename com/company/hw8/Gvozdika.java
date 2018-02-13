@@ -3,11 +3,9 @@ package com.company.hw8;
 import java.util.Objects;
 
 public class Gvozdika extends Flower {
-    protected double price;
 
-    public Gvozdika(String producerCountry, int bestBefore) {
-        super(producerCountry, bestBefore);
-        this.price = 15.50;
+    public Gvozdika(String producerCountry, int bestBefore, double price) {
+        super(producerCountry, bestBefore, price);
     }
 
     public Gvozdika() {

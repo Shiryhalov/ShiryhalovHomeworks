@@ -10,11 +10,13 @@ public class PrintableDemo {
 
         Printable[] printables = new Printable[]{book1, book2, book3, magazine1, magazine2};
 
-        for (int i = 0; i < printables.length; i++) {
-            printables[i].print();
+        for (Printable i : printables) {
+            i.print();
         }
 
+        System.out.println();
         Book.printBooks(printables);
+        System.out.println();
         Magazine.printMagazines(printables);
     }
 }

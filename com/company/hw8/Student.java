@@ -48,11 +48,12 @@ public class Student {
         this.averageMark = averageMark;
     }
 
-    public int getScholarship(){
-        if (averageMark==5){
+    public int getScholarship() {
+        if (averageMark == 5) {
             return 100;
+        } else {
+            return 80;
         }
-        else return 80;
     }
 
     @Override
@@ -73,8 +74,8 @@ public class Student {
     }
 
     @Override
-    public String toString(){
-        return String.format("Student{" +  "firstName='%s', lastName='%s', group='%s', averageMark='%.2f'}",
+    public String toString() {
+        return String.format("Student{" + "firstName='%s', lastName='%s', group='%s', averageMark='%.2f'}",
                 firstName, lastName, group, averageMark);
     }
 }

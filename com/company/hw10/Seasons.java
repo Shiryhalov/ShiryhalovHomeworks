@@ -10,7 +10,7 @@ public enum Seasons {
         }
     },
     AUTUMN(18.1);
-    public double avTemp;
+    private double avTemp;
 
     Seasons(double avTemp) {
         this.avTemp = avTemp;

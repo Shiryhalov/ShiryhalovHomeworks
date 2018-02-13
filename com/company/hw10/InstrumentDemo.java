@@ -8,8 +8,8 @@ public class InstrumentDemo {
 
         Instrument[] instruments = new Instrument[]{guitar, drum, tube};
 
-        for(int i = 0; i<instruments.length; i++){
-            instruments[i].play();
+        for(Instrument i : instruments){
+            i.play();
         }
     }
 }

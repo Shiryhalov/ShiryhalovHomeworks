@@ -3,7 +3,7 @@ package com.company.hw9;
 import java.util.Objects;
 
 public class Apple extends Fruit {
-    double price;
+    private double price;
 
     public Apple(double weight, double price) {
         super(weight);
@@ -27,7 +27,7 @@ public class Apple extends Fruit {
 
     @Override
     public double cost() {
-        double cost = price * weight;
+        double cost = price * getWeight();
         return cost;
     }
 
@@ -50,7 +50,7 @@ public class Apple extends Fruit {
     public String toString() {
         return "Apple{" +
                 "price=" + price +
-                ", weight=" + weight +
+                ", weight=" + getWeight() +
                 '}';
     }
 }

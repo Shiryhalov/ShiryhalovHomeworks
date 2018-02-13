@@ -2,9 +2,9 @@ package com.company.hw8;
 
 public class FlowerDemo {
     public static void main(String[] args) {
-        Flower gvozdika = new Gvozdika("Германия", 10);
-        Flower tulpan = new Tulpan("Бельгия", 20);
-        Flower rose = new Roses("Польша", 30);
+        Flower gvozdika = new Gvozdika("Германия", 10, 15.5);
+        Flower tulpan = new Tulpan("Бельгия", 20, 20);
+        Flower rose = new Roses("Польша", 30, 30);
 
         Flower[] bouquet1 = new Flower[]{gvozdika, tulpan, rose};
         Flower[] bouquet2 = new Flower[]{tulpan, tulpan, tulpan};

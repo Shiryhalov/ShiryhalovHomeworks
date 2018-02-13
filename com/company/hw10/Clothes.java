@@ -3,10 +3,10 @@ package com.company.hw10;
 import java.util.Objects;
 
 public abstract class Clothes {
-    public Sizes size;
-    public Double price;
-    public String color;
-    public String name;
+    private Sizes size;
+    private Double price;
+    private String color;
+    private String name;
 
     public Clothes(Sizes size, Double price, String color) {
         this.size = size;

@@ -8,6 +8,12 @@ public class Flower {
     protected double price;
     protected static int count = 0;
 
+    public Flower(String producerCountry, int bestBefore, double price) {
+        this.producerCountry = producerCountry;
+        this.bestBefore = bestBefore;
+        this.price = price;
+    }
+
     public Flower(String producerCountry, int bestBefore) {
         this.producerCountry = producerCountry;
         this.bestBefore = bestBefore;

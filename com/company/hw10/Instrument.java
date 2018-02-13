@@ -1,6 +1,6 @@
 package com.company.hw10;
 
 public interface Instrument {
-    public void play();
-    public String KEY = "До мажор";
+    void play();
+    String KEY = "До мажор";
 }

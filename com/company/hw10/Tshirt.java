@@ -23,9 +23,9 @@ public class Tshirt extends Clothes implements MensClothing, WomensClothing {
     @Override
     public String toString() {
         return "Tshirt{" +
-                "size='" + size + '\'' +
-                ", price=" + price +
-                ", color='" + color + '\'' +
+                "size='" + getSize() + '\'' +
+                ", price=" + getPrice() +
+                ", color='" + getColor() + '\'' +
                 '}';
     }
 }

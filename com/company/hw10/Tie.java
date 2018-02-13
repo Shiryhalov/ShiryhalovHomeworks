@@ -20,9 +20,9 @@ public class Tie extends Clothes implements MensClothing{
     @Override
     public String toString() {
         return "Tie{" +
-                "size=" + size +
-                ", price=" + price +
-                ", color='" + color + '\'' +
+                "size=" + getSize() +
+                ", price=" + getPrice() +
+                ", color='" + getColor() + '\'' +
                 '}';
     }
 }

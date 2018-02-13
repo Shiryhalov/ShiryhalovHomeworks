@@ -1,24 +1,24 @@
 package com.company.hw10;
 
 public class Studio {
-    public void clotheAMan(Clothes[] clothes){
+    public void clotheAMan(Clothes[] clothes) {
         System.out.println("Мужские вещи: ");
-        for(int i = 0; i<clothes.length; i++){
-            if (clothes[i] instanceof MensClothing){
-                System.out.println(clothes[i].getName() + " - Размер: " + clothes[i].size +
-                        ", Евро размер " + clothes[i].size.euroSize +
-                        ", Цена: " + clothes[i].price + " грн , Цвет: " + clothes[i].color);
+        for (Clothes i : clothes) {
+            if (i instanceof MensClothing) {
+                System.out.println(i.getName() + " - Размер: " + i.getSize() +
+                        ", Евро размер " + i.getSize().euroSize +
+                        ", Цена: " + i.getPrice() + " грн , Цвет: " + i.getColor());
             }
         }
     }
 
     public void clotheAWoman(Clothes[] clothes) {
         System.out.println("Женские вещи: ");
-        for(int i = 0; i<clothes.length; i++){
-            if (clothes[i] instanceof WomensClothing){
-                System.out.println(clothes[i].getName() + " - Размер: " + clothes[i].size +
-                        ", Евро размер: " + clothes[i].size.euroSize +
-                        ", Цена: " + clothes[i].price + " грн , Цвет: " + clothes[i].color);
+        for (Clothes i : clothes) {
+            if (i instanceof WomensClothing) {
+                System.out.println(i.getName() + " - Размер: " + i.getSize() +
+                        ", Евро размер: " + i.getSize().euroSize +
+                        ", Цена: " + i.getPrice() + " грн , Цвет: " + i.getColor());
             }
         }
     }

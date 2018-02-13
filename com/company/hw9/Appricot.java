@@ -27,7 +27,7 @@ public class Appricot extends Fruit {
 
     @Override
     public double cost() {
-        double cost = price * weight;
+        double cost = price * getWeight();
         return cost;
     }
 
@@ -50,7 +50,7 @@ public class Appricot extends Fruit {
     public String toString() {
         return "Appricot{" +
                 "price=" + price +
-                ", weight=" + weight +
+                ", weight=" + getWeight() +
                 '}';
     }
 }

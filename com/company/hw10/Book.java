@@ -1,8 +1,8 @@
 package com.company.hw10;
 
 public class Book implements Printable {
-    String name;
-    int pages;
+    private String name;
+    private int pages;
 
     public Book(String name, int pages) {
         this.name = name;
@@ -33,9 +33,9 @@ public class Book implements Printable {
     }
 
     public static void printBooks(Printable[] printables) {
-        for (int i = 0; i < printables.length; i++) {
-            if (printables[i] instanceof Book) {
-                printables[i].print();
+        for (Printable i : printables) {
+            if (i instanceof Book) {
+                i.print();
             }
         }
     }

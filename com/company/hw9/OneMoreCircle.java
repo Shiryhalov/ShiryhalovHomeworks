@@ -3,8 +3,8 @@ package com.company.hw9;
 import java.util.Objects;
 
 public class OneMoreCircle {
-    public double radius;
-    private static double pi = 3.1415;
+    private double radius;
+    final private double Pi = 3.1415;
 
     public OneMoreCircle(double radius) {
         this.radius = radius;
@@ -18,19 +18,19 @@ public class OneMoreCircle {
         this.radius = radius;
     }
 
-    public static double getPi() {
-        return pi;
+    public double getPi() {
+        return Pi;
     }
 
     public double cArea() {
         double area = 0;
-        area = radius * radius * pi;
+        area = radius * radius * Pi;
         return area;
     }
 
     public double cLength() {
         double length = 0;
-        length = 2 * radius * pi;
+        length = 2 * radius * Pi;
         return length;
     }
 

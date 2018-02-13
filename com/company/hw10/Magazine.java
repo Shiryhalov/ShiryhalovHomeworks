@@ -1,8 +1,8 @@
 package com.company.hw10;
 
 public class Magazine implements Printable {
-    String name;
-    int pages;
+    private String name;
+    private int pages;
 
     public Magazine(String name, int pages) {
         this.name = name;
@@ -33,9 +33,9 @@ public class Magazine implements Printable {
     }
 
     public static void printMagazines(Printable[] printables) {
-        for (int i = 0; i < printables.length; i++) {
-            if (printables[i] instanceof Magazine) {
-                printables[i].print();
+        for (Printable i : printables) {
+            if (i instanceof Magazine) {
+                i.print();
             }
         }
 

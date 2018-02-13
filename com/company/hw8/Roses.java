@@ -3,7 +3,10 @@ package com.company.hw8;
 import java.util.Objects;
 
 public class Roses extends Flower {
-    protected double price;
+
+    public Roses(String producerCountry, int bestBefore, double price) {
+        super(producerCountry, bestBefore, price);
+    }
 
     public Roses(String producerCountry, int bestBefore) {
         super(producerCountry, bestBefore);

@@ -1,7 +1,7 @@
 package com.company.hw9;
 
 public class Rectangle extends Shape {
-    int x, y, z;
+    private int x, y, z;
 
     public Rectangle(String color, int x, int y, int z) {
         super(color);

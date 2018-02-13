@@ -6,6 +6,8 @@ public class FruitDemo {
         Fruit pear = new Pear(0.4, 43.50);
         Fruit appricot = new Appricot(0.5, 30.25);
 
+        appricot.printManufacturerInfo();
+
         System.out.printf("%s%.2f%n", "Стоимость яблока: ", apple.cost());
         System.out.printf("%s%.2f%n", "Стоимость груши: ", pear.cost());
         System.out.printf("%s%.2f%n", "Стоимость абрикоса: ", appricot.cost());

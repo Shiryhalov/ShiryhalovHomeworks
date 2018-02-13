@@ -3,7 +3,7 @@ package com.company.hw9;
 import java.util.Objects;
 
 public abstract class Fruit {
-    double weight;
+    private double weight;
 
     public Fruit(double weight) {
         this.weight = weight;
@@ -20,8 +20,8 @@ public abstract class Fruit {
         this.weight = weight;
     }
 
-    public void printManufacturerInfo() {
-        System.out.print("Made in Ukraine");
+    final public void printManufacturerInfo() {
+        System.out.print("Made in Ukraine\n");
     }
 
     public abstract double cost();

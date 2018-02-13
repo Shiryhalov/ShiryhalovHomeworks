@@ -11,37 +11,28 @@ public class Garland {
     }
 
     public static void blink(int a, int m) {
-        int i = 0, zero;
+        int i = 0;
         while (i < m) {
-            zero = Integer.toBinaryString(a).length();
-            if (zero < 32) {
-                while (zero < 32) {
-                    System.out.print(0);
-                    zero++;
-                }
-                System.out.print(Integer.toBinaryString(a) + "\n");
-            } else {
-                System.out.println(Integer.toBinaryString(a));
-            }
+            zeros(a);
             a = ~a;
             i++;
         }
+    }
 
+    private static void zeros(int a) {
+        int zero;
+        zero = Integer.toBinaryString(a).length();
+        while (zero < 32) {
+            System.out.print(0);
+            zero++;
+        }
+        System.out.println(Integer.toBinaryString(a));
     }
 
     public static void runString(int a, int m) {
-        int i = 0, zero;
+        int i = 0;
         while (i < m) {
-            zero = Integer.toBinaryString(a).length();
-            if (zero < 32) {
-                while (zero < 32) {
-                    System.out.print(0);
-                    zero++;
-                }
-                System.out.print(Integer.toBinaryString(a << 1) + "\n");
-            } else {
-                System.out.println(Integer.toBinaryString(a << 1));
-            }
+            zeros(a);
             a = a << 1;
             i++;
         }
@@ -59,17 +50,7 @@ public class Garland {
     }
 
     public static void show(int a) {
-        int zero;
-        zero = Integer.toBinaryString(a).length();
-        if (zero < 32) {
-            while (zero < 32) {
-                System.out.print(0);
-                zero++;
-            }
-            System.out.print(Integer.toBinaryString(a) + "\n");
-        } else {
-            System.out.println(Integer.toBinaryString(a));
-        }
+        zeros(a);
     }
 
     public static void main(String[] args) {

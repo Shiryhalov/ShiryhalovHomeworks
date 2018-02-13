@@ -3,7 +3,10 @@ package com.company.hw8;
 import java.util.Objects;
 
 public class Tulpan extends Flower {
-    protected double price;
+
+    public Tulpan(String producerCountry, int bestBefore, double price) {
+        super(producerCountry, bestBefore, price);
+    }
 
     public Tulpan(String producerCountry, int bestBefore) {
         super(producerCountry, bestBefore);

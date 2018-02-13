@@ -3,8 +3,8 @@ package com.company.hw12;
 import java.util.Objects;
 
 public class Employee {
-    public String fullName;
-    public double salary;
+    private String fullName;
+    private double salary;
 
     public Employee(String fullName, double salary) {
         this.fullName = fullName;

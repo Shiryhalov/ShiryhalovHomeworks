@@ -26,8 +26,6 @@ public enum Sizes {
 
     @Override
     public String toString() {
-        return "Sizes{" +
-                "euroSize=" + euroSize +
-                '}';
+        return name();
     }
 }

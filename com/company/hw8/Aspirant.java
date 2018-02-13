@@ -2,7 +2,7 @@ package com.company.hw8;
 
 import java.util.Objects;
 
-public class Aspirant extends Student{
+public class Aspirant extends Student {
     private String work;
 
     public Aspirant(String firstName, String lastName, String group, double averageMark, String work) {
@@ -18,11 +18,12 @@ public class Aspirant extends Student{
         this.work = work;
     }
 
-    public int getScholarship(){
-        if (getAverageMark()==5){
+    public int getScholarship() {
+        if (getAverageMark() == 5) {
             return 200;
+        } else {
+            return 180;
         }
-        else return 180;
     }
 
     @Override
