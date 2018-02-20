@@ -1,10 +1,19 @@
 package com.company.hw12;
 
+import java.util.Date;
 import java.util.Objects;
+import java.text.DateFormat;
 
 public class Employee {
     private String fullName;
     private double salary;
+    private Date salaryDate;
+
+    public Employee(String fullName, double salary, Date salaryDate) {
+        this.fullName = fullName;
+        this.salary = salary;
+        this.salaryDate = salaryDate;
+    }
 
     public Employee(String fullName, double salary) {
         this.fullName = fullName;
@@ -30,6 +39,15 @@ public class Employee {
         this.salary = salary;
     }
 
+    public String getSalaryDate() {
+        DateFormat dateFormat = DateFormat.getDateInstance(DateFormat.SHORT);
+        return dateFormat.format(salaryDate.getTime());
+    }
+
+    public void setSalaryDate(Date salaryDate) {
+        this.salaryDate = salaryDate;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -50,6 +68,7 @@ public class Employee {
         return "Employee{" +
                 "fullName='" + fullName + '\'' +
                 ", salary=" + salary +
+                ", salaryDate=" + salaryDate +
                 '}';
     }
 }

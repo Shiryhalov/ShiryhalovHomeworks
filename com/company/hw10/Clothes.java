@@ -6,7 +6,7 @@ public abstract class Clothes {
     private Sizes size;
     private Double price;
     private String color;
-    private String name;
+    protected String name;
 
     public Clothes(Sizes size, Double price, String color) {
         this.size = size;

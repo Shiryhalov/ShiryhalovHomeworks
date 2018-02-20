@@ -1,17 +1,13 @@
 package com.company.hw10;
 
 public class Skirt extends Clothes implements WomensClothing {
-    public String name = "Юбка";
 
     public Skirt(Sizes size, Double price, String color) {
         super(size, price, color);
+        name = "Юбка";
     }
 
     public Skirt() {
-    }
-
-    public String getName() {
-        return name;
     }
 
     public void clotheAWoman() {

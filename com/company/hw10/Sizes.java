@@ -11,13 +11,21 @@ public enum Sizes {
     S(36),
     M(38),
     L(40);
-    public int euroSize;
+    private int euroSize;
 
     Sizes(int euroSize) {
         this.euroSize = euroSize;
     }
 
     Sizes() {
+    }
+
+    public int getEuroSize() {
+        return euroSize;
+    }
+
+    public void setEuroSize(int euroSize) {
+        this.euroSize = euroSize;
     }
 
     public String getDescription() {

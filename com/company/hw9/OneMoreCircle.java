@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class OneMoreCircle {
     private double radius;
-    final private double Pi = 3.1415;
+    final private double PI = 3.1415;
 
     public OneMoreCircle(double radius) {
         this.radius = radius;
@@ -19,18 +19,18 @@ public class OneMoreCircle {
     }
 
     public double getPi() {
-        return Pi;
+        return PI;
     }
 
     public double cArea() {
         double area = 0;
-        area = radius * radius * Pi;
+        area = radius * radius * PI;
         return area;
     }
 
     public double cLength() {
         double length = 0;
-        length = 2 * radius * Pi;
+        length = 2 * radius * PI;
         return length;
     }
 

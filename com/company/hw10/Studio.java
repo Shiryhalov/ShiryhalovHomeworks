@@ -6,7 +6,7 @@ public class Studio {
         for (Clothes i : clothes) {
             if (i instanceof MensClothing) {
                 System.out.println(i.getName() + " - Размер: " + i.getSize() +
-                        ", Евро размер " + i.getSize().euroSize +
+                        ", Евро размер " + i.getSize().getEuroSize() +
                         ", Цена: " + i.getPrice() + " грн , Цвет: " + i.getColor());
             }
         }
@@ -17,7 +17,7 @@ public class Studio {
         for (Clothes i : clothes) {
             if (i instanceof WomensClothing) {
                 System.out.println(i.getName() + " - Размер: " + i.getSize() +
-                        ", Евро размер: " + i.getSize().euroSize +
+                        ", Евро размер: " + i.getSize().getEuroSize() +
                         ", Цена: " + i.getPrice() + " грн , Цвет: " + i.getColor());
             }
         }

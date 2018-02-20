@@ -1,17 +1,13 @@
 package com.company.hw10;
 
-public class Tie extends Clothes implements MensClothing{
-    public String name = "Галстук";
+public class Tie extends Clothes implements MensClothing {
 
     public Tie(Sizes size, Double price, String color) {
         super(size, price, color);
+        name = "Галстук";
     }
 
     public Tie() {
-    }
-
-    public String getName() {
-        return name;
     }
 
     public void clotheAMan() {
