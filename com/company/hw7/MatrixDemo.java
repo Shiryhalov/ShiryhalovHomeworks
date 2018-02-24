@@ -19,7 +19,7 @@ public class MatrixDemo {
         System.out.println("=");
         matrix1.summ(matrix2).print();
         System.out.println("*");
-        matrix2.print();
+        System.out.println("2");
         System.out.println("=");
         matrix1.multNumber(2).print();
         System.out.println("*");

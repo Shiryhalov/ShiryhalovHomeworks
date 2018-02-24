@@ -1,8 +1,9 @@
 package com.company.hw8;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Animal {
+public class Animal implements Serializable{
     protected String food;
     protected String location;
 
