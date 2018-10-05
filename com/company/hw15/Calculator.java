@@ -1,9 +1,6 @@
 package com.company.hw15;
 
 public class Calculator {
-    public Calculator() {
-    }
-
     public static <T extends Number, V extends Number> Double sum(T x, V y) {
         return x.doubleValue() + y.doubleValue();
     }

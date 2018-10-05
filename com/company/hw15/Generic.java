@@ -2,7 +2,6 @@ package com.company.hw15;
 
 
 import com.company.hw8.Animal;
-
 import java.io.Serializable;
 
 public class Generic<T extends Comparable, V extends Animal & Serializable, K extends Number> {
