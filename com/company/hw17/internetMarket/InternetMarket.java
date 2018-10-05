@@ -132,7 +132,7 @@ public class InternetMarket {
                                 System.out.println("Для покупки товаров из корзины, подтвердите пароль: ");
                                 Scanner sc = new Scanner(System.in);
                                 if (sc.hasNext()) {
-                                    String pass = new String(sc.nextLine());
+                                    String pass = sc.nextLine();
                                     if (pass.equals(user.getPassword())) {
                                         Set<Product> productSet = new HashSet<>();
                                         basket.setProductSet(productSet);
@@ -178,7 +178,7 @@ public class InternetMarket {
         System.out.println("Для того, чтобы поместить товар в корзину, введите его Имя(name)");
         Scanner sc = new Scanner(System.in);
         if (sc.hasNext()) {
-            String product = new String(sc.nextLine());
+            String product = sc.nextLine();
             if (basket.findProduct(product, phones)) {
                 System.out.println("Товар успешно добавлен в корзину!");
             } else {
