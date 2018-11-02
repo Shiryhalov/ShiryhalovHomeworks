@@ -1,8 +1,9 @@
 package com.company.hw17.internetMarket;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Product {
+public class Product implements Serializable {
     private String name;
     private double price;
     private double rating;

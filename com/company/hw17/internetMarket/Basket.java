@@ -1,8 +1,9 @@
 package com.company.hw17.internetMarket;
 
+import java.io.*;
 import java.util.*;
 
-public class Basket {
+public class Basket implements Serializable {
     private Set<Product> productSet;
 
     public Basket(Set<Product> productSet) {
@@ -34,6 +35,29 @@ public class Basket {
             }
         }
         return false;
+    }
+
+    public void serializable() {
+        Basket basket = this;
+        try (FileOutputStream fos =
+                     new FileOutputStream("src/com/company/hw17/internetMarket/io/basket.ser");
+             ObjectOutputStream oos = new ObjectOutputStream(fos)) {
+            oos.writeObject(basket);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    public Basket deserializable() {
+        Basket basket = new Basket();
+        try (FileInputStream fis =
+                     new FileInputStream("src/com/company/hw17/internetMarket/io/basket.ser");
+             ObjectInputStream oos = new ObjectInputStream(fis)) {
+            return (Basket) oos.readObject();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return basket;
+        }
     }
 
     @Override

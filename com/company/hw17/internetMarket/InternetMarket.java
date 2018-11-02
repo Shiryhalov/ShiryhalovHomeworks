@@ -4,6 +4,8 @@ import com.company.MethodsForWork;
 
 import java.util.*;
 
+import static com.company.hw17.internetMarket.BuyingReport.buyingReport;
+
 public class InternetMarket {
     public static void main(String[] args) {
         User user = new User();
@@ -50,6 +52,7 @@ public class InternetMarket {
             }
             System.out.println("1 - Просмотр списка каталогов");
             System.out.println("2 - Перейти в корзину");
+            System.out.println("3 - Загрузить последнюю корзину");
             System.out.println("0 - Выход");
             int b = MethodsForWork.checkInt();
             switch (b) {
@@ -82,6 +85,7 @@ public class InternetMarket {
                                     System.out.println("Такого варианта нет");
                             }
                             putIntoBasket(basket, phones);
+                            basket.serializable();
                             break;
 
                         case 2:
@@ -107,6 +111,7 @@ public class InternetMarket {
                                     System.out.println("Такого варианта нет");
                             }
                             putIntoBasket(basket, headphones);
+                            basket.serializable();
                             break;
                         case 0:
                             break;
@@ -134,6 +139,7 @@ public class InternetMarket {
                                 if (sc.hasNext()) {
                                     String pass = sc.nextLine();
                                     if (pass.equals(user.getPassword())) {
+                                        buyingReport(basket);
                                         Set<Product> productSet = new HashSet<>();
                                         basket.setProductSet(productSet);
                                         System.out.printf("%s, спасибо за покупку!\n", user.getLogin());
@@ -154,6 +160,7 @@ public class InternetMarket {
                         b = MethodsForWork.checkInt();
                         switch (b) {
                             case 1:
+                                buyingReport(basket);
                                 Set<Product> productSet = new HashSet<>();
                                 basket.setProductSet(productSet);
                                 System.out.println("Спасибо за покупку!");
@@ -164,6 +171,10 @@ public class InternetMarket {
                                 System.out.println("Такого варианта нет");
                         }
                     }
+                    break;
+                case 3:
+                    basket = basket.deserializable();
+                    System.out.println("Корзина загружена!\n");
                     break;
                 case 0:
                     isContinue = false;
