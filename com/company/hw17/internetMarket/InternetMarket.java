@@ -1,9 +1,7 @@
 package com.company.hw17.internetMarket;
 
 import com.company.MethodsForWork;
-
 import java.util.*;
-
 import static com.company.hw17.internetMarket.BuyingReport.buyingReport;
 
 public class InternetMarket {

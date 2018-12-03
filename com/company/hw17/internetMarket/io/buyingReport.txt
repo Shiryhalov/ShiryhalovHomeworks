@@ -1,2 +1,4 @@
 1. Sennheiser   150.0 
-2. Apple        400.0 
+2. Razer        199.0 
+3. Asus         450.0 
+4. Apple        400.0 
